@@ -8,13 +8,12 @@ require "logger"
 require "open-uri"
 
 CONFIG_FILE = "config.yaml"
-LOG_FILE    = "gddns2.log"
 
 DEFAULT_TTL = 300
 DEFAULT_OPTION = { "ttl" => DEFAULT_TTL }
 
 def get_global_ip
-  open("http://ipinfo.io/ip").read.strip
+  URI.open("http://ipinfo.io/ip").read.strip
 end
 
 class Logger
@@ -87,7 +86,7 @@ class GehirnDNS
   attr_accessor :logger
 end
 
-logger = Logger.new(LOG_FILE)
+logger = Logger.new(STDOUT)
 
 config = YAML.parse_file(CONFIG_FILE).to_ruby
 
