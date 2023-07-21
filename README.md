@@ -4,8 +4,7 @@
 - Disable log file output
 - Add run.sh
 
-
-Below this is the original readme.
+Below is the content of the original readme.
 
 # gddns2
 
