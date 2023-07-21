@@ -3,6 +3,7 @@
 - Support ruby3.x
 - Disable log file output
 - Add run.sh
+- Add support custom ipinfo server
 
 Below is the content of the original readme.
 
