@@ -1,3 +1,9 @@
+# modified gddns2
+- Delete config.yaml
+- Support ruby3.x
+- Disable log file output
+- Add run.sh
+
 # gddns2
 
 An DDNS client for Gehirn DNS of [Gehirn Infrastructure Service](https://www.gehirn.jp/).
