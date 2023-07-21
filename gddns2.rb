@@ -9,11 +9,11 @@ require "open-uri"
 
 CONFIG_FILE = "config.yaml"
 
-DEFAULT_TTL = 300
+DEFAULT_TTL = 60
 DEFAULT_OPTION = { "ttl" => DEFAULT_TTL }
 
-def get_global_ip
-  URI.open("http://ipinfo.io/ip").read.strip
+def get_global_ip(ipinfo_uri)
+  URI.open(ipinfo_uri).read.strip
 end
 
 class Logger
@@ -95,12 +95,13 @@ gehirn_dns.base = config["api"]["base"]
 gehirn_dns.token = config["api"]["token"]
 gehirn_dns.secret = config["api"]["secret"]
 gehirn_dns.logger = logger
+ipinfo_uri_conf = config["ipinfo"]["uri"]
 
 new_ip = \
 if ARGV.length == 1
   ARGV[0]
 else
-  get_global_ip
+  get_global_ip(ipinfo_uri_conf)
 end
 
 # get zones list

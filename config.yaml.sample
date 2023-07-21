@@ -12,3 +12,6 @@ zones:
   domains:
   - akihabara.example.tokyo.
   - shinjuku.example.tokyo.
+ipinfo:
+  uri: http://ipinfo.io/ip
+
