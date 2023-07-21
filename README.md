@@ -4,6 +4,9 @@
 - Disable log file output
 - Add run.sh
 
+
+Below this is the original readme.
+
 # gddns2
 
 An DDNS client for Gehirn DNS of [Gehirn Infrastructure Service](https://www.gehirn.jp/).
